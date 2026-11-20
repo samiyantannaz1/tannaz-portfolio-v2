@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "title": "Tannaz Samiyan — Freelance Front-end Developer",
+    "description": "Freelance web designer and front-end developer."
+  },
+  "nav": {
+    "name": "Tannaz Samiyan",
+    "home": "Home",
+    "about": "About",
+    "approach": "Our approach",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeLabel": "Tannaz Samiyan, home"
+  },
+  "footer": {
+    "name": "Tannaz Samiyan",
+    "role": "Freelance web designer"
+  },
+  "hero": {
+    "alt": "Tannaz Samiyan",
+    "eyebrow1": "Freelance web designer &",
+    "eyebrow2": "front-end developer",
+    "title": "Where design and code find their balance",
+     "text": "I build modern, fast, and responsive websites that reflect each brand’s identity and deliver a smooth, engaging user experience.",
+    "about": "About me",
+    "contact": "Get in touch"
+  },
+ "statement": {
+  "eyebrow": "Independent Web Designer & Front-End Developer",
+  "name": "Tannaz Samiyan",
+  "quote": "Every website should reflect the identity, needs, and goals of the people behind it.",
+  "text": "Working with me means communicating directly with the person responsible for designing and building your website. No middlemen, a dedicated focus on your project, and clear communication from the initial idea to the final launch.",
+  "services": [
+    "Custom Web Design",
+    "Front-End Development",
+    "Website Redesign",
+    "Bilingual Websites"
+  ]
+},
+  "intro": {
+    "placeholder": "Place your portrait here",
+    "alt": "Portrait of Tannaz Samiyan",
+    "eyebrow": "The developer",
+    "name": "Tannaz Samiyan",
+    "text": "Computer engineer and front-end developer, focused on interfaces that are both beautiful and fast. [Write two or three sentences about yourself.]",
+    "quote": "Every interface should reflect the people who use it.",
+    "readMore": "Read more"
+  },
+  "work": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "demo": "Live demo",
+    "repo": "GitHub",
+     "view": "View project",
+  "projects": [
+  {
+    "title": "Nava Farhadi, Interior Design Studio",
+    "tags": "Interior design · Studio website",
+    "description": "A website for an interior design studio, with residential projects and a dedicated page for each room: living room, kitchen, bedroom and more."
+  },
+  {
+    "title": "Nava Farhadi, Portfolio",
+    "tags": "Architecture · Portfolio · FA / EN",
+    "description": "A bilingual portfolio for an architect and interior designer, with an animated intro, a project slider and individual project pages."
+  },
+  {
+    "title": "Arman Vaziri, Architecture & Design",
+    "tags": "Architecture · Studio website",
+    "description": "A website for an architecture and design studio, with a project index, services, an about page and a project inquiry form."
+  }
+]
+  },
+
+"freelance": {
+  "eyebrow": "Independent Collaboration",
+  "title": "Why Work with a Freelancer?",
+  "text": "When you work with me, you communicate directly with the designer and developer behind your website. From understanding your needs and planning the project to design, development and final delivery, every stage is handled with direct communication and attention to detail.",
+  "benefits": [
+    {
+      "title": "Direct Communication",
+      "text": "You work directly with the person designing and developing your website, making communication clearer and feedback more precise."
+    },
+    {
+      "title": "Dedicated Attention",
+      "text": "Every project is approached according to its own goals and requirements, with time dedicated to design details and quality implementation."
+    },
+    {
+      "title": "Faster Decision-Making",
+      "text": "Your feedback goes directly into the process, allowing decisions to be made and implemented without unnecessary communication layers."
+    },
+    {
+      "title": "Flexible Collaboration",
+      "text": "The workflow is adapted to your project's needs and circumstances, with agreed changes considered and implemented along the way."
+    },
+    {
+      "title": "Transparent Pricing",
+      "text": "Costs are based on your project's scope and requirements, with a clear estimate and agreed details provided before work begins."
+    },
+    {
+      "title": "Post-Launch Support",
+      "text": "My involvement doesn't end at launch. I'm available for agreed updates, improvements and support after your website goes live."
+    }
+  ]
+}
+,
+
+"approach": {
+  "placeholder": "A project screenshot",
+  "alt": "Tannaz Samiyan designing and developing a website",
+  "eyebrow": "From concept to creation",
+  "title": "My Approach",
+  "text": "Every website begins with understanding the project's goals and needs. Through thoughtful design, custom development and attention to detail, I create cohesive, functional digital experiences that reflect each brand's identity.",
+  "readMore": "Read more",
+  "features": [
+    {
+      "title": "UI Design",
+      "text": "Creating clean, cohesive interfaces that reflect each brand's identity and meet its unique needs."
+    },
+    {
+      "title": "Front-end Development",
+      "text": "Custom development with clean code, solid architecture and responsive layouts."
+    },
+    {
+      "title": "Performance & User Experience",
+      "text": "Focusing on speed, accessibility and thoughtful details to deliver a smooth, reliable experience."
+    },
+    {
+      "title": "Launch & Support",
+      "text": "From final checks and deployment to ongoing updates and improvements."
+    }
+  ]
+},
+"cta": {
+  "title": "Have a website project in mind?",
+  "button": "Start a Project"
+}
+,
+"about": {
+  "alt": "Tannaz Samiyan",
+  "eyebrow": "Web Designer & Front-End Developer",
+  "title": "About Me",
+  "quote": "Every interface should reflect the people who use it.",
+  "paragraphs": [
+    "I'm Tannaz Samiyan, a freelance web designer and front-end developer with a background in computer engineering. I design and build websites that combine distinctive visual identities with smooth user experiences and reliable technical foundations.",
+    "To me, front-end development is a combination of logic and aesthetics. That's why I pay as much attention to clean, maintainable code and technical performance as I do to details like typography, layout, spacing and visual consistency.",
+    "I use Next.js, React, TypeScript and Tailwind CSS to develop modern, responsive and optimized websites. I also specialize in bilingual Persian and English websites, with proper right-to-left (RTL) support.",
+    "For architecture, interior design and brand-focused projects, I aim to create websites that reflect each client's unique identity and style. Working directly with me means having one point of contact throughout the entire process, from the initial conversation and concept development to implementation, launch and ongoing support."
+  ],
+  "experienceTitle": "Experience",
+  "experience": ["Jam-e Jam Newspaper", "Hamshahri Newspaper"]
+},
+"contactPage": {
+  "eyebrow": "Get in touch",
+  "title": "Contact",
+  "text": "Write to me about a project, a collaboration, or just to say hello.",
+  "greeting": "Hello Tannaz, I found your website and would like to talk about a project.",
+  "email": "Email",
+  "phone": "Phone",
+  "whatsapp": "WhatsApp",
+  "telegram": "Telegram",
+  "github": "GitHub",
+  "linkedin": "LinkedIn"
+},
+"form": {
+  "name": "Name",
+  "email": "Your email",
+  "message": "Message",
+  "send": "Send message",
+  "sending": "Sending…",
+  "successTitle": "Message sent",
+  "successText": "Thank you! Your message has arrived and I'll get back to you soon.",
+  "errorValidation": "Please check your name, email and message and try again.",
+  "errorSend": "Something went wrong while sending. Please try again, or contact me on WhatsApp or by email."
+},
+"seo": {
+  "home": {
+    "title": "Tannaz Samiyan | Freelance Front-End Developer",
+    "description": "Tannaz Samiyan is a freelance front-end developer and web designer creating modern, responsive websites with React, Next.js and TypeScript."
+  },
+  "about": {
+    "title": "About Tannaz Samiyan | Web Designer & Front-End Developer",
+    "description": "Learn about Tannaz Samiyan, a freelance web designer and front-end developer specializing in React, Next.js, TypeScript and bilingual websites."
+  },
+  "approach": {
+    "title": "My Approach | Tannaz Samiyan",
+    "description": "Discover the process behind Tannaz Samiyan's web design and front-end development projects, from UI design and development to performance and launch."
+  },
+  "contact": {
+    "title": "Contact Tannaz Samiyan | Freelance Web Designer",
+    "description": "Get in touch with Tannaz Samiyan about custom website design, front-end development, collaborations and freelance web projects."
+  },
+  "keywords": [
+    "Tannaz Samiyan",
+    "Front-End Developer",
+    "Freelance Web Designer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Web Design",
+    "Frontend Development"
+  ],
+  "author": "Tannaz Samiyan"
+}
+}
