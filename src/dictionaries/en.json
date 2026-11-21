@@ -38,15 +38,15 @@
     "Bilingual Websites"
   ]
 },
-  "intro": {
-    "placeholder": "Place your portrait here",
-    "alt": "Portrait of Tannaz Samiyan",
-    "eyebrow": "The developer",
-    "name": "Tannaz Samiyan",
-    "text": "Computer engineer and front-end developer, focused on interfaces that are both beautiful and fast. [Write two or three sentences about yourself.]",
-    "quote": "Every interface should reflect the people who use it.",
-    "readMore": "Read more"
-  },
+ "intro": {
+  "placeholder": "Place your portrait here",
+  "alt": "Portrait of Tannaz Samiyan",
+  "eyebrow": "Front-End Developer",
+  "name": "Tannaz Samiyan",
+  "text": "I’m Tannaz Samiyan, a computer engineer and front-end developer. I build modern, responsive, and user-friendly websites using React, Next.js, and TypeScript. I care deeply about clean code, seamless user experiences, and thoughtful visual details.",
+  "quote": "Every interface should reflect the people who use it.",
+  "readMore": "Read more"
+},
   "work": {
     "eyebrow": "Projects",
     "title": "Selected work",
