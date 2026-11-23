@@ -20,3 +20,43 @@ body {
   background: var(--color-deep);
   color: #e5e5e5;
 }
+
+
+/* افکت تایپ شدن موقع اسکرول */
+.type-reveal [data-c] {
+  opacity: 0;
+  transition: opacity 0.18s ease-out;
+}
+.type-reveal[data-visible="true"] [data-c] {
+  opacity: 1;
+}
+/* کسانی که کاهش حرکت را روشن کرده‌اند، یا جاوااسکریپت خاموش است: متن بلافاصله دیده می‌شود */
+@media (prefers-reduced-motion: reduce) {
+  .type-reveal [data-c] {
+    opacity: 1;
+    transition: none;
+  }
+}
+@media (scripting: none) {
+  .type-reveal [data-c] {
+    opacity: 1;
+  }
+}
+
+/* اسکرول نرم (Lenis) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

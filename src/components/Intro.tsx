@@ -1,9 +1,10 @@
 
-
 import Image from "next/image";
 import Link from "next/link";
+import TypeReveal from "@/components/TypeReveal";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/i18n";
+import ScrollImage from "@/components/ScrollImage";
 
 type IntroProps = {
   lang: Locale;
@@ -32,33 +33,46 @@ export default function Intro({
             reverse ? "md:order-2" : ""
           }`}
         >
+      
           {photo ? (
-            <Image
-              src={photo}
-              alt={dict.alt}
-              fill
-              quality={90}
-              sizes="(min-width: 1280px) 530px, (min-width: 768px) 42vw, 100vw"
-              className={`object-cover ${flip ? "scale-x-[-1]" : ""}`}
-            />
-          ) : (
-            <span>{dict.placeholder}</span>
-          )}
+  <ScrollImage>
+    <Image
+      src={photo}
+      alt={dict.alt}
+      fill
+      quality={90}
+      sizes="(min-width: 1280px) 530px, (min-width: 768px) 42vw, 100vw"
+      className={`object-cover ${flip ? "scale-x-[-1]" : ""}`}
+    />
+  </ScrollImage>
+) : (
+  <span>{dict.placeholder}</span>
+)}
         </div>
 
         <div>
           <span className="mb-4 block text-[11px] uppercase tracking-[0.3em] text-wine rtl:tracking-normal">
             {dict.eyebrow}
           </span>
+
           <h2 className="mb-6 font-display text-5xl uppercase leading-[1.1] tracking-wide rtl:leading-[1.4] rtl:tracking-normal">
             {dict.name}
           </h2>
-          <p className="max-w-xl text-[#6e5f5a] rtl:leading-loose">
-            {dict.text}
-          </p>
-          <p className="my-8 border-s-2 border-wine ps-5 font-display text-3xl italic leading-snug rtl:not-italic rtl:leading-[1.5]">
-            {dict.quote}
-          </p>
+
+          <TypeReveal
+            as="p"
+            text={dict.text}
+            by="word"
+            className="max-w-xl text-[#6e5f5a] rtl:leading-loose"
+          />
+
+          <TypeReveal
+            as="p"
+            text={dict.quote}
+            by="word"
+            className="my-8 border-s-2 border-wine ps-5 font-display text-3xl italic leading-snug rtl:not-italic rtl:leading-[1.5]"
+          />
+
           <Link
             href={`/${lang}/about`}
             className="border-b border-wine pb-1 text-[11px] uppercase tracking-[0.25em] text-wine rtl:tracking-normal"

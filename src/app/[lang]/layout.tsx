@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -9,6 +8,7 @@ import {
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import { contact } from "@/lib/contact";
 import { dirOf, hasLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
@@ -89,10 +89,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: Props) {
+export default async function RootLayout({ children, params }: Props) {
   const { lang } = await params;
 
   if (!hasLocale(lang)) notFound();
@@ -124,11 +121,14 @@ export default async function RootLayout({
           }}
         />
 
-        <Header lang={lang} dict={dict.nav} />
+        {/* تغییر: هدر، محتوا و فوتر داخل SmoothScroll */}
+        <SmoothScroll>
+          <Header lang={lang} dict={dict.nav} />
 
-        {children}
+          {children}
 
-        <Footer dict={dict.footer} />
+          <Footer dict={dict.footer} />
+        </SmoothScroll>
       </body>
     </html>
   );

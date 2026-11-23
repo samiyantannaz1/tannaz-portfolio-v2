@@ -1,5 +1,8 @@
+
+
 import Link from "next/link";
 import ResponsivePhoto from "@/components/ResponsivePhoto";
+import TypeReveal from "@/components/TypeReveal";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/i18n";
 
@@ -22,12 +25,14 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className="relative flex min-h-svh items-end overflow-hidden bg-deep px-6 pb-10 pt-32 md:pb-20 md:pt-36">
+
       <div className="absolute inset-0 bg-[linear-gradient(160deg,#4a1a24,#18080c)]">
         <ResponsivePhoto
           desktop={photo}
           mobile={mobilePhoto}
           alt={dict.alt}
           priority
+          scrollZoom
           desktopPosition={focus}
           mobilePosition={focusMobile}
         />
@@ -49,12 +54,22 @@ export default function Hero({
             <br className="md:hidden" />
             {dict.eyebrow2}
           </span>
-          <h1 className="max-w-[20ch] font-display text-[1.65rem] uppercase leading-[1.15] tracking-wide text-white rtl:tracking-normal sm:text-4xl md:max-w-[12ch] md:text-7xl md:leading-[1.04]">
-            {dict.title}
-          </h1>
-          <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted md:mt-7 md:max-w-md md:text-base">
-            {dict.text}
-          </p>
+
+          {/* تغییر ۱: تیتر با افکت تایپ */}
+          <TypeReveal
+            as="h1"
+            text={dict.title}
+            className="max-w-[20ch] font-display text-[1.65rem] uppercase leading-[1.15] tracking-wide text-white rtl:tracking-normal sm:text-4xl md:max-w-[12ch] md:text-7xl md:leading-[1.04]"
+          />
+
+          {/* تغییر ۲: متن زیر تیتر، با تأخیر تا تیتر تموم بشه */}
+          <TypeReveal
+            as="p"
+            text={dict.text}
+            delay={900}
+            className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted md:mt-7 md:max-w-md md:text-base"
+          />
+
           <div className="mt-6 flex flex-wrap gap-3 md:mt-10 md:gap-4">
             <Link
               href={`/${lang}/about`}

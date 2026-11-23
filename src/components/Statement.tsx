@@ -1,3 +1,4 @@
+import TypeReveal from "@/components/TypeReveal";
 import type { Dictionary } from "@/lib/dictionaries";
 
 export default function Statement({
@@ -16,13 +17,21 @@ export default function Statement({
           {dict.name}
         </h2>
 
-        <p className="mx-auto mt-10 max-w-4xl font-display text-3xl italic leading-snug text-white rtl:not-italic rtl:leading-[1.5] md:text-5xl">
-          {dict.quote}
-        </p>
+        {/* تغییر ۱: جمله‌ی شعاری بزرگ با افکت تایپ */}
+        <TypeReveal
+          as="p"
+          text={dict.quote}
+          className="mx-auto mt-10 max-w-4xl font-display text-3xl italic leading-snug text-white rtl:not-italic rtl:leading-[1.5] md:text-5xl"
+        />
 
-        <p className="mx-auto mt-8 max-w-2xl text-muted rtl:leading-loose">
-          {dict.text}
-        </p>
+        {/* تغییر ۲: پاراگراف زیرش، کلمه‌به‌کلمه، با تأخیر تا جمله‌ی بالا تموم بشه */}
+        <TypeReveal
+          as="p"
+          text={dict.text}
+          by="word"
+          delay={1200}
+          className="mx-auto mt-8 max-w-2xl text-muted rtl:leading-loose"
+        />
 
         <ul className="mt-16 grid grid-cols-2 md:grid-cols-4 md:border-y md:border-white/15">
           {dict.services.map((s) => (

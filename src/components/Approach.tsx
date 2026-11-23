@@ -1,7 +1,10 @@
+
 import Image from "next/image";
 import Link from "next/link";
+import TypeReveal from "@/components/TypeReveal";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/i18n";
+import ScrollImage from "@/components/ScrollImage";
 
 function Icon() {
   return (
@@ -35,9 +38,9 @@ export default function Approach({
   return (
     <section className={`bg-deep-2 px-6 ${page ? "pb-28 pt-40" : "py-28"}`}>
       <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-[5fr_7fr]">
-        {/* کادر هم‌نسبت عکس: 823 × 885 */}
+        {/* Image */}
         <div className="relative grid aspect-[4/5] w-full place-items-center overflow-hidden rounded-sm bg-[linear-gradient(160deg,#3a121c,#18080c)] text-sm text-muted">
-          {photo ? (
+          {/* {photo ? (
             <Image
               src={photo}
               alt={dict.alt}
@@ -48,19 +51,39 @@ export default function Approach({
             />
           ) : (
             <span>{dict.placeholder}</span>
-          )}
+          )} */}
+          {photo ? (
+  <ScrollImage>
+    <Image
+      src={photo}
+      alt={dict.alt}
+      fill
+      quality={90}
+      sizes="(min-width: 1280px) 530px, (min-width: 768px) 42vw, 100vw"
+      className="object-cover"
+    />
+  </ScrollImage>
+) : (
+  <span>{dict.placeholder}</span>
+)}
         </div>
 
+        {/* Content */}
         <div>
           <span className="mb-4 block text-[11px] uppercase tracking-[0.3em] text-accent rtl:tracking-normal">
             {dict.eyebrow}
           </span>
+
           <h2 className="mb-6 font-display text-5xl uppercase tracking-wide text-white rtl:leading-[1.4] rtl:tracking-normal md:text-6xl">
             {dict.title}
           </h2>
-          <p className="mb-8 max-w-xl text-muted rtl:leading-loose">
-            {dict.text}
-          </p>
+
+          <TypeReveal
+            as="p"
+            text={dict.text}
+            by="word"
+            className="mb-8 max-w-xl text-muted rtl:leading-loose"
+          />
 
           {dict.features.map((f) => (
             <div
@@ -68,10 +91,12 @@ export default function Approach({
               className="flex gap-5 border-t border-white/10 py-6"
             >
               <Icon />
+
               <div>
                 <h3 className="mb-1 font-display text-lg uppercase tracking-[0.12em] text-white rtl:tracking-normal">
                   {f.title}
                 </h3>
+
                 <p className="text-sm text-neutral-500 rtl:leading-loose">
                   {f.text}
                 </p>
