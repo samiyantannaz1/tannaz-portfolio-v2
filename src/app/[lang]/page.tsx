@@ -75,7 +75,7 @@ export default async function Home({ params }: Props) {
     lang={lang}
     dict={dict.hero}
     photo="/images/hero-desktop.webp"
-    mobilePhoto="/images/hero-mobile.webp"
+    mobilePhoto="/images/nhero-mobile.webp"
   />
   <Statement dict={dict.statement} />
 
