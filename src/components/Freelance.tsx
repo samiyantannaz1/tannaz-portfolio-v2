@@ -1,5 +1,7 @@
 
-import TypeReveal from "@/components/TypeReveal";
+
+
+import Reveal from "@/components/Reveal";
 import type { Dictionary } from "@/lib/dictionaries";
 
 export default function Freelance({
@@ -18,16 +20,19 @@ export default function Freelance({
           {dict.title}
         </h2>
 
-        <TypeReveal
-          as="p"
-          text={dict.text}
-          by="word"
-          className="max-w-2xl text-[#6e5f5a] rtl:leading-loose"
-        />
+        <Reveal>
+          <p className="max-w-2xl text-[#6e5f5a] rtl:leading-loose">
+            {dict.text}
+          </p>
+        </Reveal>
 
         <div className="mt-12 grid gap-px border border-[#d6c8bb] bg-[#d6c8bb] md:grid-cols-2 lg:grid-cols-3">
           {dict.benefits.map((b, i) => (
-            <div key={b.title} className="bg-secondary px-8 py-9">
+            <Reveal
+              key={b.title}
+              delay={(i % 3) * 0.1}
+              className="bg-secondary px-8 py-9"
+            >
               <b className="text-xs font-medium tracking-[0.25em] text-wine">
                 {String(i + 1).padStart(2, "0")}
               </b>
@@ -39,7 +44,7 @@ export default function Freelance({
               <p className="text-[#6e5f5a] rtl:leading-loose">
                 {b.text}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

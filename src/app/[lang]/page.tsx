@@ -38,38 +38,58 @@ export default async function Home({ params }: Props) {
   const dict = await getDictionary(lang);
 
   return (
-    <main>
-      <Hero
-        lang={lang}
-        dict={dict.hero}
-        photo="/images/hero-desktop.webp"
-        mobilePhoto="/images/nhero-mobile.webp"
-      />
+    // <main>
+    //   <Hero
+    //     lang={lang}
+    //     dict={dict.hero}
+    //     photo="/images/hero-desktop.webp"
+    //     mobilePhoto="/images/nhero-mobile.webp"
+    //   />
 
-      <Statement dict={dict.statement} />
+    //   <Statement dict={dict.statement} />
 
 
 
-      <Intro
-        lang={lang}
-        dict={dict.intro}
-        photo="/images/tttttt.webp"
-        flip={lang === "en"}
-      />
+    //   <Intro
+    //     lang={lang}
+    //     dict={dict.intro}
+    //     photo="/images/tttttt.webp"
+    //     flip={lang === "en"}
+    //   />
 
-      <Work dict={dict.work} />
+    //   <Work dict={dict.work} />
 
-      <Freelance dict={dict.freelance} />
+    //   <Freelance dict={dict.freelance} />
 
-      <Approach
-        lang={lang}
-        dict={dict.approach}
-        showLink
-        photo="/images/napproach.webp"
-      />
+    //   <Approach
+    //     lang={lang}
+    //     dict={dict.approach}
+    //     showLink
+    //     photo="/images/napproach.webp"
+    //   />
 
-      <Cta lang={lang} dict={dict.cta} />
-    </main>
+    //   <Cta lang={lang} dict={dict.cta} />
+    // </main>
+<main>
+  <Hero
+    lang={lang}
+    dict={dict.hero}
+    photo="/images/hero-desktop.webp"
+    mobilePhoto="/images/hero-mobile.webp"
+  />
+  <Statement dict={dict.statement} />
+
+  <Intro lang={lang} dict={dict.intro} photo="/images/tttttt.webp"flip={lang === "en"} />
+  <Work dict={dict.work} />
+  <Freelance dict={dict.freelance} />
+  <Approach
+    lang={lang}
+    dict={dict.approach}
+    showLink
+    photo="/images/approach.webp"
+  />
+  <Cta lang={lang} dict={dict.cta} />
+</main>
   );
 }
 

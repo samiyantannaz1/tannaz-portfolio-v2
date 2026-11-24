@@ -25,10 +25,15 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   );
 
   return (
+    // <ReactLenis
+    //   root
+    //   options={{ lerp: 0.1, smoothWheel: !reduce, anchors: true }}
+    // >
+
     <ReactLenis
-      root
-      options={{ lerp: 0.1, smoothWheel: !reduce, anchors: true }}
-    >
+  root
+  options={{ lerp: 0.07, wheelMultiplier: 0.9, smoothWheel: !reduce, anchors: true }}
+>
       <ScrollToTopOnNavigate />
       {children}
     </ReactLenis>

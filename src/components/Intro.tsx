@@ -1,17 +1,19 @@
 
+
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import TypeReveal from "@/components/TypeReveal";
+import ScrollImage from "@/components/ScrollImage";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/i18n";
-import ScrollImage from "@/components/ScrollImage";
 
 type IntroProps = {
   lang: Locale;
   dict: Dictionary["intro"];
   photo?: string;
-  flip?: boolean; // عکس آینه‌ای بشه
-  reverse?: boolean; // جای عکس و متن عوض بشه
+  flip?: boolean;
+  reverse?: boolean;
 };
 
 export default function Intro({
@@ -33,21 +35,20 @@ export default function Intro({
             reverse ? "md:order-2" : ""
           }`}
         >
-      
           {photo ? (
-  <ScrollImage>
-    <Image
-      src={photo}
-      alt={dict.alt}
-      fill
-      quality={90}
-      sizes="(min-width: 1280px) 530px, (min-width: 768px) 42vw, 100vw"
-      className={`object-cover ${flip ? "scale-x-[-1]" : ""}`}
-    />
-  </ScrollImage>
-) : (
-  <span>{dict.placeholder}</span>
-)}
+            <ScrollImage>
+              <Image
+                src={photo}
+                alt={dict.alt}
+                fill
+                quality={90}
+                sizes="(min-width: 1280px) 530px, (min-width: 768px) 42vw, 100vw"
+                className={`object-cover ${flip ? "scale-x-[-1]" : ""}`}
+              />
+            </ScrollImage>
+          ) : (
+            <span>{dict.placeholder}</span>
+          )}
         </div>
 
         <div>
@@ -59,12 +60,11 @@ export default function Intro({
             {dict.name}
           </h2>
 
-          <TypeReveal
-            as="p"
-            text={dict.text}
-            by="word"
-            className="max-w-xl text-[#6e5f5a] rtl:leading-loose"
-          />
+          <Reveal>
+            <p className="max-w-xl text-[#6e5f5a] rtl:leading-loose">
+              {dict.text}
+            </p>
+          </Reveal>
 
           <TypeReveal
             as="p"
@@ -84,3 +84,4 @@ export default function Intro({
     </section>
   );
 }
+
